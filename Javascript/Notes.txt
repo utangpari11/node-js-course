@@ -1,0 +1,14 @@
+Dynamic - Not pre-compiled, code can change at runtime.
+Weakly typed programming lanugage - Data types are asssumed automatically. 
+Make webpage more Dynamic.
+JS on browser side. - can manipulate HTML code, CSS, send background requests
+JS on server side. - can be executed on any machine, use to build web backends with the help of node.JS
+
+
+**********
+Extensions used - 
+1. Material Icon Theme
+2. Prettier - Code Formatter - alt+shift+F - shortcut
+
+
+ 
