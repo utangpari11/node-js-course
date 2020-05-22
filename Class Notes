@@ -1,1 +1,2 @@
 Command to run debugger in VSCode - node inspect app.js remove --title="ttl2"
+Synchronous -  One after one, Asynchronous - Many threads parallel
