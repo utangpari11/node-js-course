@@ -8,7 +8,6 @@
 //         console.log(data['current'].temperature)
 //         console.log(data['current'].precip)        
 
-const request = require("request")
 
         
 //     }
@@ -23,6 +22,9 @@ request({url:url2},(err,response)=>{
     console.log(locationArr[0]+" "+locationArr[1])
 })
 */
+
+//Learn Callback Abstraction ------
+/*
 const geocode = require('./utils/geocode')
 geocode('New York',(error,data)=>{
     console.log('Data: ',data)
@@ -32,3 +34,12 @@ geocode('Palo Altos',(error,data)=>{
     console.log('Data: ',data)
     console.log('Error: ',error)  
 })
+*/
+//Challenge - utils/forecast.js
+
+const forecast = require('./utils/forecast')
+forecast(44.1545,-75.7088,(error,data)=>{
+    console.log('Data: ',data)
+    console.log('Error: ',error)
+})
+
