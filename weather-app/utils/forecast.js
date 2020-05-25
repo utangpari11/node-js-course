@@ -18,7 +18,7 @@ const forecast = (lat,lon,callback) =>{
         }
         
     })
-    console.log(url)
+    //console.log(url)
 }
 
 

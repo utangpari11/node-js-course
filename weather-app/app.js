@@ -24,22 +24,34 @@ request({url:url2},(err,response)=>{
 */
 
 //Learn Callback Abstraction ------
-/*
-const geocode = require('./utils/geocode')
-geocode('New York',(error,data)=>{
-    console.log('Data: ',data)
-    console.log('Error: ',error)
-})
-geocode('Palo Altos',(error,data)=>{
-    console.log('Data: ',data)
-    console.log('Error: ',error)  
-})
-*/
-//Challenge - utils/forecast.js
 
+const geocode = require('./utils/geocode')
 const forecast = require('./utils/forecast')
-forecast(44.1545,-75.7088,(error,data)=>{
-    console.log('Data: ',data)
-    console.log('Error: ',error)
-})
+
+if(process.argv[2]!=null){
+    geocode(process.argv[2],(error,{latitude,longitude,location})=>{
+        if(error){
+            return console.log(error);        
+        }
+        console.log('lat and lon: ',latitude,longitude)
+        console.log('Location: ',location)
+        console.log('Error: ',error)  
+        forecast(longitude,latitude,(error,forecastData)=>{
+            if(error){
+                return console.log(error);
+                
+            }
+            
+            console.log('Forecast Data: ',forecastData)
+            console.log('Error: ',error)
+        })
+    
+    
+    })
+}else{
+    console.log('Please enter a location')
+}
+
+
+//Challenge - utils/forecast.js
 
